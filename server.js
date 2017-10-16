@@ -3,7 +3,8 @@ import config from './config';
 
 const app = express();
 
-app.use(express.static('client'));
+// Root dir is probably not the best for static assets but that's what we're going with for now
+app.use(express.static('.'));
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
