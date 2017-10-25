@@ -7,8 +7,12 @@ const app = express();
 app.use(express.static('.'));
 app.set('view engine', 'ejs');
 
-app.get('/', (req, res) => {
-    res.render('index', {who: 'Sam'});
+// app.get('/', (req, res) => {
+//     res.render('index');
+// });
+
+app.get('*', (req, res) => {
+    res.render('index');
 });
 
 app.listen(config.port, function () {
