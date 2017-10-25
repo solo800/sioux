@@ -7,13 +7,20 @@ const app = express();
 app.use(express.static('.'));
 app.set('view engine', 'ejs');
 
-// app.get('/', (req, res) => {
-//     res.render('index');
+// Example of api call
+// app.get('/data', (req, res) => {
+//     res.send(JSON.stringify({
+//         key: 'val'
+//     }));
 // });
 
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
     res.render('index');
 });
+
+// app.get('*', (req, res) => {
+//     res.render('index');
+// });
 
 app.listen(config.port, function () {
     console.log(`Listening on port ${config.port}`);

@@ -1,6 +1,6 @@
 import React from 'react';
 import {render} from 'react-dom';
-import {BrowserRouter, Route} from 'react-router-dom'
+import {BrowserRouter, Route, Link} from 'react-router-dom'
 import Router from './Router';
 
 const App = () => (
