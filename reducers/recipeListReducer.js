@@ -15,6 +15,9 @@ export default function (state = {newRecipe: {title: ''}, recipes: []}, action) 
             // console.log('returning', newState, 'from', action);
             return newState;
             break;
+        case types.LOAD_RECIPES_SUCCESS:
+            return action.recipeList;
+            break;
         default:
             return state;
     }

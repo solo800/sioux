@@ -67,6 +67,7 @@ class RecipeList extends React.Component {
 // }
 
 function mapStateToProps (state, ownProps) {
+    console.log('mapping', state, ownProps);
     return {
         newRecipe: state.newRecipe,
         recipes: state.recipes,

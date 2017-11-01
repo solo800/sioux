@@ -18,7 +18,22 @@ app.set('view engine', 'ejs');
 //     res.render('index');
 // });
 
+app.get('/api/recipes', (req, res) => {
+    console.log('in api');
+    res.json({
+        newRecipe: {
+            title: '',
+        },
+        recipes: [
+            {title: 'Spaghetti'},
+            {title: 'Pizza'},
+            {title: 'Steak'},
+        ],
+    });
+});
+
 app.get('*', (req, res) => {
+    console.log('in *');
     res.render('index');
 });
 

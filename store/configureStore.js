@@ -1,11 +1,12 @@
 import {createStore, applyMiddleware} from 'redux';
-import recipeReducer from '../reducers/recipeReducer';
+import recipeListReducer from '../reducers/recipeListReducer';
 import reduxImmutableStateInvariant from 'redux-immutable-state-invariant';
+import thunk from 'redux-thunk';
 
 export default function (initialState) {
     return createStore(
-        recipeReducer,
+        recipeListReducer,
         initialState,
-        applyMiddleware(reduxImmutableStateInvariant())
+        applyMiddleware(thunk, reduxImmutableStateInvariant())
     );
 }
